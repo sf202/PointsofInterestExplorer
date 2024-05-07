@@ -34,7 +34,7 @@ Update stakeholders on the current progress, including completed milestones, cha
 
 ### Stage 5: Demo and Final Report
 
-- **Basic Functions**: Implement basic CRUD operations (Create, Read, Update, Delete) for all entities in the database. Ensure that users can register, log in, and interact with points of interest, including leaving reviews.
+- **Basic Functions**: Implement basic CRUD operations (Create, Read, Update, Delete) for all entities in the database. Ensure that users can register, log in, and interact with points of interest, including leaving reviews.  
 
 - **Advanced Functions**: Integrate more complex features, like advanced search filters, interactive maps, and possibly a recommendation engine that suggests POIs based on user preferences.
 
