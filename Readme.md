@@ -4,6 +4,7 @@
 ## Introduction
 
 Welcome to the Points of Interest Explorer project! This guide will take you through the steps to contribute to the development of this innovative platform designed to discover and share information about various points of interest. Let's get started on the journey to make exploration easier and more interactive for everyone!
+We built a Points of Interest (POI) web application that allows users to discover, rate, and discuss parks, historical sites, and other significant landmarks within a specific city-region. The application serves as a centralized hub of landmark related information by utilizing open-source data to populate comprehensive listings. 
 
 ## Project Roadmap
 
