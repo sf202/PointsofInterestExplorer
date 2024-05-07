@@ -1,0 +1,54 @@
+{% extends "layout.html" %}
+
+{% block sub_content %}
+<div class="container my-4">
+  <h1 class="text-center mb-4">Write a New Review</h1>
+  <form method="POST">
+    <div class="form-group">
+        <label for="poi">Point of Interest:</label>
+        <select id="poi" name="poi_pid" required>
+        <!-- Dynamically populate this dropdown with POIs from your database -->
+        {% for poi in pois %}
+            <option value="{{ poi.poi_pid }}">{{ poi.name }}</option>
+        {% endfor %}
+        </select>
+    </div>
+
+    <div class="form-group row">
+      <label for="body" class="col-sm-2 col-form-label">Review:</label>
+      <div class="col-sm-10">
+        <textarea class="form-control" name="comment" id="comment" rows="4" required></textarea>
+      </div>
+    </div>
+
+    <div class="form-group row">
+      <label for="rating" class="col-sm-2 col-form-label">Rating:</label>
+      <div class="col-sm-10">
+        <input type="number" class="form-control" name="rating" id="rating" min="1" max="5" required />
+      </div>
+    </div>
+
+    <div class="form-group row">
+      <label for="posted_date" class="col-sm-2 col-form-label">Posted Date:</label>
+      <div class="col-sm-10">
+        <input type="date" class="form-control" name="posted_date" id="posted_date" required />
+      </div>
+    </div>
+
+    <div class="form-group row">
+      <div class="col-sm-10 offset-sm-2">
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </div>
+    </div>
+  </form>
+</div>
+{% endblock %}
+
+{% block scripts %}
+{{ super() }}
+<script>
+    // Initialize CKEditor
+    CKEDITOR.replace('body');
+</script>
+{% endblock %}
+

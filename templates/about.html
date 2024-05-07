@@ -1,0 +1,45 @@
+{% extends "layout.html" %}
+
+{% block sub_content %}
+    <h1>About Points of Interest Explorer</h1>
+    <p>Discover, explore, and share your experiences with our vibrant community of travelers and local explorers. Dive into the wonders that every corner of the city holds, from lush parks to historic landmarks, all rated and reviewed by people like you.</p>
+
+    <h2>Mission</h2>
+    <p>To connect people with the places around them, fostering a community of exploration and shared experiences.</p>
+
+    <h2>Vision</h2>
+    <p>To be the go-to platform for discovering new places and adventures, both near and far.</p>
+
+    <h3>Average Ratings by Category</h3>
+    {% if avg_ratings_by_category %}
+        <ul>
+            {% for cat in avg_ratings_by_category %}
+            <li>{{ cat.category_name }}: {{ cat.avg_rating }}</li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>No ratings available yet.</p>
+    {% endif %}
+
+    <h2>Testimonials</h2>
+    <ul>
+        {% for testimonial in testimonials %}
+            <li>
+                <strong>Title: {{ testimonial.title }}</strong>
+                <blockquote>
+                    "<em>{{ testimonial.body }}</em>" - {{ testimonial.first_name }} {{ testimonial.last_name }}
+                </blockquote>
+            </li>
+        {% endfor %}
+    </ul>
+
+    <h2>Featured Points of Interest</h2>
+    <ul>
+        {% for highlight in highlights %}
+            <li>
+                <strong>{{ highlight.name }}</strong>: {{ highlight.description }}
+            </li>
+        {% endfor %}
+    </ul>
+
+{% endblock %}
